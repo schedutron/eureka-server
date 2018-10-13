@@ -1,2 +1,3 @@
 venv/
 eureka/__pycache__/
+*.pyc
