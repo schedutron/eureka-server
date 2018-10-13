@@ -28,5 +28,10 @@ def send_text():
     res = personality_insights.profile(
         text, content_type='text/plain', raw_scores=True
         ).get_result()
+    output = {}
+    for trait in res['personality']:
+        output[trait['name']] = round(float(trait['percentile']), 2)
     # now send this back?
-    return json.dumps(res)
+    return json.dumps(output)
+    # Or just return a success or failure message, and send analysis via a
+    # different endpoint?
