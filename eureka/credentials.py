@@ -1,4 +1,4 @@
-# Credentials
+# Credentials, didn't get time to be gitignored :)
 
 # For IBM Personality Insights
 pi_url = 'https://gateway.watsonplatform.net/personality-insights/api'
