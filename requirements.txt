@@ -1,4 +1,4 @@
 Flask
 pymysql
 watson_developer_cloud
-pymysql
+pymysqlflask-cors
