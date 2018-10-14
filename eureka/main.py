@@ -44,7 +44,7 @@ def send_text():
     output = {}
     for trait in res['personality']:
         output[trait['name']] = round(float(trait['percentile']), 2)
-    json_output = json.dumps(output, indent=4)
+    json_output = json.dumps(output)
     # store json output to db for later retrieval
     with connection.cursor() as cur:
 		cur.execute("INSERT INTO records (username, traits) VALUES (%s,%s)", (thwart(username), thwart(json_output)))
